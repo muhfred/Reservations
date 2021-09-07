@@ -19,7 +19,7 @@ namespace WebUI.Controllers
     public class ReservationsController : ApiControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<PaginatedList<ReservationDto>>> GetTodoItemsWithPagination([FromQuery] GetReservationsWithPaginationQuery query)
+        public async Task<ActionResult<PaginatedList<ReservationDto>>> GetReservationsWithPagination([FromQuery] GetReservationsWithPaginationQuery query)
         {
             return await Mediator.Send(query);
         }
